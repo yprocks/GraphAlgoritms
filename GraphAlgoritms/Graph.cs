@@ -12,6 +12,8 @@ namespace GraphAlgoritms
 
         // Prims Implementation
         public QData[] QData { get; set; }
+
+        // Prims and Dijkstra
         public Node[] Nodes { get; set; }
 
         // Floyd Warshall Implementation
@@ -20,9 +22,17 @@ namespace GraphAlgoritms
         public int[][] Matrtix { get; set; }
 
         // Dijkstra Algorithm
+        public DRows[] DRows { get; set; }
 
     }
 
+    public class DRows
+    {
+        public int Vertex { get; set; }
+        public int Distance { get; set; }
+        public bool isPulled { get; set; } = false;
+        public int ToParent { get; set; }
+    }
 
     public class QData
     {
@@ -35,6 +45,7 @@ namespace GraphAlgoritms
     {
         public int Vertex { get; set; }
         public int Distance { get; set; }
+        public bool isVisited { get; set; } = false;
         public Node[] Neighbours { get; set; }
     }
 

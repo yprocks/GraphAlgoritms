@@ -48,9 +48,17 @@ namespace GraphAlgoritms
             #endregion
 
             #region Dijkstra
-            
-            #endregion
 
+            Dijkstra ds = new Dijkstra(5, 10);
+            ds.SetRootNode(1);
+            ds.FillMatrix();
+            ds.FillDijkstraTable();
+
+            ds.PrintData();
+
+            ds.FindShortestPathFromRootToNode(4);
+
+            #endregion
             Console.ReadLine();
         }
     }
